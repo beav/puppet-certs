@@ -76,6 +76,8 @@
 #
 # $server_ca_name::       The name of the server CA (used for https)
 #
+# $messaging_client_cert:: The location of the messaging client cert
+#
 class certs (
 
   $log_dir        = $certs::params::log_dir,
@@ -98,6 +100,7 @@ class certs (
   $server_key      = $certs::params::server_key,
   $server_cert_req = $certs::params::server_cert_req,
   $server_ca_cert  = $certs::params::server_ca_cert,
+  $messaging_client_cert  = $certs::params::messaging_client_cert,
 
   $pki_dir = $certs::params::pki_dir,
   $ssl_build_dir = $certs::params::ssl_build_dir,

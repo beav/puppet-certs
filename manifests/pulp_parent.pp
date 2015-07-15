@@ -10,7 +10,7 @@ class certs::pulp_parent (
   $nodes_cert_name  = $certs::params::nodes_cert_name,
 
   $messaging_ca_cert     = $certs::ca_cert,
-  $messaging_client_cert = $certs::params::messaging_client_cert
+  $messaging_client_cert = $certs::messaging_client_cert,
 
   ) inherits pulp::params { # lint:ignore:inherits_across_namespaces
 

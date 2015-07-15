@@ -8,8 +8,8 @@ class certs::apache (
   ) inherits certs::params {
 
   $apache_cert_name = "${hostname}-apache"
-  $apache_cert = "${certs::pki_dir}/certs/katello-apache.crt"
-  $apache_key  = "${certs::pki_dir}/private/katello-apache.key"
+  $apache_cert = "${certs::pki_dir}/certs/apache.crt"
+  $apache_key  = "${certs::pki_dir}/private/apache.key"
 
   if $::certs::server_cert {
     cert { $apache_cert_name:
